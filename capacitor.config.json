@@ -1,0 +1,13 @@
+{
+  "appId": "io.ionic.starter",
+  "appName": "dead-stats-redux",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

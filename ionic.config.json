@@ -1,0 +1,7 @@
+{
+  "name": "dead-stats-redux",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
