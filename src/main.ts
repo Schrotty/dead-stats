@@ -1,8 +1,19 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router';
+import DataService from "@/services/DataService";
 
 import { IonicVue } from '@ionic/vue';
+
+/* Custom PrimeVUE components */
+import DataTable from 'primevue/datatable';
+import Dropdown from 'primevue/dropdown';
+import Button from 'primevue/button';
+import ColumnGroup from 'primevue/columngroup';
+import Row from 'primevue/row';
+import Column from 'primevue/column';
+import Dialog from 'primevue/dialog';
+import Card from 'primevue/card';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
@@ -23,10 +34,26 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
+/* PrimeVUE */
+import "primevue/resources/themes/luna-blue/theme.css"       //theme
+import "primevue/resources/primevue.min.css"                 //core css
+import "primeicons/primeicons.css"                           //icons
+
 const app = createApp(App)
   .use(IonicVue)
-  .use(router);
-  
+  .use(router)
+
+app.component('Card', Card)
+app.component('DataTable', DataTable);
+app.component('Row', Row);
+app.component('Column', Column);
+app.component('ColumnGroup', ColumnGroup);
+app.component('Dialog', Dialog);
+app.component('Dropdown', Dropdown);
+app.component('Button', Button);
+
+DataService.initiateDatabase();
+
 router.isReady().then(() => {
   app.mount('#app');
 });

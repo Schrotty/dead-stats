@@ -1,21 +1,20 @@
 <template>
   <ion-page>
     <ion-content>
+      <MatchDialog />
+
       <ion-tabs>
         <ion-tab-bar slot="bottom">
-          <ion-tab-button tab="tab1" href="/tabs/tab1">
-            <ion-icon :icon="triangle" />
-            <ion-label>Tab 1</ion-label>
+          <ion-tab-button tab="matches" href="/tabs/matches">
+            <ion-icon :icon="listSharp" />
           </ion-tab-button>
             
-          <ion-tab-button tab="tab2" href="/tabs/tab2">
-            <ion-icon :icon="ellipse" />
-            <ion-label>Tab 2</ion-label>
+          <ion-tab-button disabled tab="tab2" href="/tabs/tab2">
+            <ion-icon :icon="barChartSharp" />
           </ion-tab-button>
           
-          <ion-tab-button tab="tab3" href="/tabs/tab3">
-            <ion-icon :icon="square" />
-            <ion-label>Tab 3</ion-label>
+          <ion-tab-button disabled tab="tab3" href="/tabs/tab3">
+            <ion-icon :icon="constructSharp" />
           </ion-tab-button>
         </ion-tab-bar>
       </ion-tabs>
@@ -24,17 +23,19 @@
 </template>
 
 <script lang="ts">
-import { IonTabBar, IonTabButton, IonTabs, IonContent, IonLabel, IonIcon, IonPage } from '@ionic/vue';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { IonTabBar, IonTabButton, IonTabs, IonContent, IonIcon, IonPage } from '@ionic/vue';
+import { barChartSharp, constructSharp, pieChartSharp, listSharp } from 'ionicons/icons';
+import MatchDialog from "@/components/MatchDialog.vue";
 
 export default {
   name: 'Tabs',
-  components: { IonContent, IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
+  components: { IonContent, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, MatchDialog },
   setup() {
     return {
-      ellipse, 
-      square, 
-      triangle,
+      pieChartSharp,
+      constructSharp,
+      barChartSharp,
+      listSharp
     }
   }
 }
