@@ -1,8 +1,6 @@
 <template>
   <ion-page>
     <ion-content>
-      <MatchDialog />
-
       <ion-tabs>
         <ion-tab-bar slot="bottom">
           <ion-tab-button tab="matches" href="/tabs/matches">
@@ -23,20 +21,19 @@
 </template>
 
 <script lang="ts">
-import { IonTabBar, IonTabButton, IonTabs, IonContent, IonIcon, IonPage } from '@ionic/vue';
-import { barChartSharp, constructSharp, pieChartSharp, listSharp } from 'ionicons/icons';
-import MatchDialog from "@/components/MatchDialog.vue";
+  import { IonTabBar, IonTabButton, IonTabs, IonContent, IonIcon, IonPage } from '@ionic/vue';
+  import { barChartSharp, constructSharp, pieChartSharp, listSharp } from 'ionicons/icons';
 
-export default {
-  name: 'Tabs',
-  components: { IonContent, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, MatchDialog },
-  setup() {
-    return {
-      pieChartSharp,
-      constructSharp,
-      barChartSharp,
-      listSharp
+  export default {
+    name: 'Tabs',
+    components: { IonContent, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage },
+    setup() {
+      return {
+        pieChartSharp,
+        constructSharp,
+        barChartSharp,
+        listSharp
+      }
     }
   }
-}
 </script>

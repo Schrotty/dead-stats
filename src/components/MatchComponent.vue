@@ -18,15 +18,15 @@
       <Column field="map" header="Map" headerStyle="text-align: center" bodyStyle="text-align: center"></Column>
       <Column field="result" header="Result" headerStyle="text-align: center" bodyStyle="text-align: center"></Column>
 
-      <Column headerStyle="width: 3rem">
+      <Column headerStyle="width: 4rem">
         <template #body>
-          <i class="pi pi-pencil"></i>
+          <Button icon="pi pi-pencil" class="p-button-text p-button-secondary" />
         </template>
       </Column>
 
-      <Column headerStyle="width: 3rem">
+      <Column headerStyle="width: 4rem">
         <template #body>
-          <i class="pi pi-window-maximize"></i>
+          <Button icon="pi pi-window-maximize" class="p-button-text p-button-secondary" />
         </template>
       </Column>
     </DataTable>
